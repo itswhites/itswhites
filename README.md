@@ -14,7 +14,7 @@
         header {
             background-color: #232f3e;
             color: #fff;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
         }
         nav {
@@ -22,42 +22,52 @@
             color: #fff;
             text-align: center;
             padding: 10px 0;
+            font-size: 18px;
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 20px;
         }
         nav a:hover {
             text-decoration: underline;
         }
         section {
             padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
         .product {
             border: 1px solid #ccc;
             border-radius: 5px;
             background-color: #fff;
             padding: 20px;
-            margin-bottom: 20px;
+            width: 30%;
+            margin-bottom: 30px;
         }
         .product img {
             max-width: 100%;
             height: auto;
+            margin-bottom: 20px;
         }
         footer {
             background-color: #232f3e;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 20px 0;
+        }
+        .logo img {
+            width: 150px; /* Adjust the size of the logo */
+            height: auto;
         }
     </style>
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="logo.png" alt="Nomx Store Logo">
+        </div>
         <h1>Welcome to Nomx Store</h1>
     </header>
     <nav>
@@ -67,16 +77,16 @@
     </nav>
     <section>
         <div class="product">
-            <img src="product1.jpg" alt="Product 1">
-            <h2>Product 1</h2>
-            <p>Description of Product 1.</p>
+            <img src="white_tshirt1.jpg" alt="White T-Shirt 1">
+            <h2>White T-Shirt 1</h2>
+            <p>Description of White T-Shirt 1.</p>
             <p>$19.99</p>
             <button>Add to Cart</button>
         </div>
         <div class="product">
-            <img src="product2.jpg" alt="Product 2">
-            <h2>Product 2</h2>
-            <p>Description of Product 2.</p>
+            <img src="white_tshirt2.jpg" alt="White T-Shirt 2">
+            <h2>White T-Shirt 2</h2>
+            <p>Description of White T-Shirt 2.</p>
             <p>$29.99</p>
             <button>Add to Cart</button>
         </div>
