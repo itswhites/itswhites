@@ -1,59 +1,34 @@
-import emoji
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button onclick="addToDisplay('1')">1</button>
+            <button onclick="addToDisplay('2')">2</button>
+            <button onclick="addToDisplay('3')">3</button>
+            <button onclick="addToDisplay('+')">+</button>
+            <button onclick="addToDisplay('4')">4</button>
+            <button onclick="addToDisplay('5')">5</button>
+            <button onclick="addToDisplay('6')">6</button>
+            <button onclick="addToDisplay('-')">-</button>
+            <button onclick="addToDisplay('7')">7</button>
+            <button onclick="addToDisplay('8')">8</button>
+            <button onclick="addToDisplay('9')">9</button>
+            <button onclick="addToDisplay('*')">*</button>
+            <button onclick="addToDisplay('0')">0</button>
+            <button onclick="addToDisplay('/')">/</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="clearDisplay()">C</button>
+        </div>
+    </div>
 
-# Define emoji faces for calculator buttons
-buttons = {
-    '1️⃣': '1',
-    '2️⃣': '2',
-    '3️⃣': '3',
-    '➕': '+',
-    '4️⃣': '4',
-    '5️⃣': '5',
-    '6️⃣': '6',
-    '➖': '-',
-    '7️⃣': '7',
-    '8️⃣': '8',
-    '9️⃣': '9',
-    '✖️': '*',
-    '0️⃣': '0',
-    '➗': '/',
-    '🆗': '=',
-    '🔄': 'C'
-}
-
-# Function to evaluate the expression
-def evaluate(expression):
-    try:
-        result = eval(expression)
-        return result
-    except:
-        return 'Error'
-
-# Main function
-def main():
-    expression = ''
-    while True:
-        print('🧮 Calculator 🧮')
-        print('---------------')
-        print(expression)
-        print('---------------')
-        for emoji_face, value in buttons.items():
-            print(emoji.emojize(f':{emoji_face}:', use_aliases=True), end=' ')
-            if value == '=':
-                print()
-        print()
-        
-        user_input = input('Enter emoji face: ')
-        
-        if user_input in buttons:
-            if buttons[user_input] == 'C':
-                expression = ''
-            elif buttons[user_input] == '=':
-                result = evaluate(expression)
-                print(f'Result: {result}')
-                expression = str(result)
-            else:
-                expression += buttons[user_input]
-
-# Run the program
-if __name__ == "__main__":
-    main()
+    <script src="script.js"></script>
+</body>
+</html>
